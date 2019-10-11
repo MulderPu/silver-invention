@@ -1,8 +1,11 @@
 import 'dart:async';
 
 import 'package:flutter/material.dart';
+import 'package:splash_screen_app/views/homeScreen.dart';
 
 class SplashScreen extends StatefulWidget {
+  static const routeName = '/';
+
   @override
   _SplashScreenState createState() => new _SplashScreenState();
 }
@@ -14,7 +17,7 @@ class _SplashScreenState extends State<SplashScreen> {
   }
 
   void navigationPage() {
-    Navigator.of(context).pushReplacementNamed('/HomeScreen');
+    Navigator.of(context).pushReplacementNamed(HomeScreen.routeName);
   }
 
   @override

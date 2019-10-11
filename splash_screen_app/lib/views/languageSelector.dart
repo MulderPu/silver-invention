@@ -7,7 +7,8 @@ class LanguageSelector extends StatefulWidget {
 }
 
 class _LanguageSelectorState extends State<LanguageSelector> {
-  static final List<String> languagesList = allTranslations.supportedLanguagesName;
+  static final List<String> languagesList =
+      allTranslations.supportedLanguagesName;
   static final List<String> languageCodesList =
       allTranslations.supportedLanguagesCodes;
 
@@ -20,7 +21,6 @@ class _LanguageSelectorState extends State<LanguageSelector> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        // title: Text('Select a language'),
         title: Text(allTranslations.text('title_select_language')),
       ),
       body: _buildLanguagesList(),
@@ -39,20 +39,14 @@ class _LanguageSelectorState extends State<LanguageSelector> {
   _buildLanguageItem(String language) {
     return InkWell(
       onTap: () async {
-        print(languagesMap[language]);
         // change language here
-        // application.onLocaleChanged(new Locale(languagesMap[language]));
-        await allTranslations.setNewLanguage(languagesMap[language]);
+        await allTranslations.setNewLanguage(languagesMap[language], true);
+        setState(() {}); // set state to reload
       },
       child: Center(
         child: Padding(
           padding: const EdgeInsets.symmetric(vertical: 20.0),
-          child: Text(
-            language,
-            style: TextStyle(
-              fontSize: 24.0
-            )
-          ),
+          child: Text(allTranslations.text(language), style: TextStyle(fontSize: 24.0)),
         ),
       ),
     );

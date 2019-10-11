@@ -5,5 +5,8 @@
   "tab_notifications": "Notifications",
   "tab_bag": "Bag",
   "title_select_language": "Select Language",
-  "welcome_text": "Welcome to Home!"
+  "welcome_text": "Welcome to Home!",
+  "app_title": "Broccoli Master",
+  "english": "English",
+  "chinese": "中文"
 }

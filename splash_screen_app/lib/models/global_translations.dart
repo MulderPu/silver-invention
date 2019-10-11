@@ -8,7 +8,10 @@ import 'package:shared_preferences/shared_preferences.dart';
 /// Preference Variables
 const String _storageKey = "MyApp_";
 const List<String> _supportedLanguages = ['en', 'cn'];
-const List<String> _supportedLanguagesName = ['English', 'Chinese'];
+const List<String> _supportedLanguagesName = [
+  'english',
+  'chinese'
+];
 Future<SharedPreferences> _prefs = SharedPreferences.getInstance();
 
 class GlobalTranslations {
